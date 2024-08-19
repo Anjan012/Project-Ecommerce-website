@@ -13,7 +13,10 @@ body{
 
 .section-padding{
     padding: 20px 80px;
+}
 
+.section-margin{
+    margin: 40px 0px;
 }
 
 #header{
@@ -86,11 +89,50 @@ body{
     margin-top:20px;
 }
 
+/* our services---------------------------------------- */
+
+#our-services{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+#our-services .service{
+    width:30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    background-color:#f5f5f5;
+    border-radius:20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+#our-services .service img{
+    width:120px;
+}
+#our-services .service h3{
+    color: #424141;
+    font-weight: 600;
+    line-height: 2;
+}
+#our-services .service p{
+    text-align: center;
+    color: #686666;
+    font-size: 15px;
+}
+
 
 /* Best seller section ------------------------ */
 
 #bestseller{
     width: 100%;
+    background-color: #f9f9f9;
+    padding-top:20px;
+    padding-bottom:80px;
 }
 #bestseller h1{
     text-align: center;
@@ -110,15 +152,20 @@ body{
 #bestseller .bestseller-item{
     width: 23%;
     min-width: 250px;
-    
 }
 
 #bestseller .bestseller-item img{
     border-radius: 15px;
-}
-#bestseller .bs-list img{
     width:100%;
 }
+#bestseller .bestseller-item{
+    transition: 0.4s ease;
+}
+#bestseller .bestseller-item:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+
 
 #bestseller .bs-list h3{
     padding:6px 0px;
@@ -267,5 +314,68 @@ body{
     font-size:20px;
     color:rgb(247, 62, 62);
     margin-left:30px;
+}
+
+#newsletter {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url("../img/newsletter/news.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+    background-position: 20% 10%;
+    background-repeat: no-repeat;
+    background-color: rgba(59, 59, 59, 0.6); 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#newsletter .newstext h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#newsletter .newstext p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newsletter .newstext p span{
+    color: #ffbd27;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+}
+
+#newsletter button {
+    height: 3.125rem; 
+    padding: 0 20px; 
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap; 
+    min-width: 100px; 
 }
 
