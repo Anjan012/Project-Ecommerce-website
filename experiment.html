@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d4cece;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+}
+
+#header .nav-logo a {
+  font-size: 25px;
+  color: white;
+}
+
+#header .nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+#header .nav-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#header .navbar li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 20px;
+  position: relative;
+}
+
+#header .navbar li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#header .navbar a:hover,
+#header .navbar a.active {
+  color: #088178;
+}
+
+#header .navbar a.active::after,
+#header .navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2.01px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  #header .nav-toggle {
+    display: block;
+  }
+
+  #header .navbar {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #d4cece;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  #header .navbar li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #header .navbar li a {
+    color: white;
+  }
+
+  #header .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #header .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #header .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #header .navbar.active {
+    display: block;
+  }
+}
+</style>
+<body>
+    <section id="header">
+        <div class="nav-logo">
+          <a href="index.html">web_logo</a>
+        </div>
+        <div class="nav-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="user.html"><i class="fa-regular fa-user"></i></a></li>
+        </ul>
+      </section>
+</body>
+</html>
