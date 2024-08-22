@@ -152,10 +152,11 @@ body {
 }
 #bestseller .bestseller-item {
   width: 23%;
-  min-width: 250px;
+  max-width: 23%;
+  min-width: 200px;
   padding: 20px 0;
   margin: 20px 0;
-  border: 1px solid rgb(237, 237, 237);
+  /* border: 1px solid rgb(237, 237, 237); */
 }
 
 #bestseller .bestseller-item img {
@@ -387,6 +388,18 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .section-padding{
+    padding: 20px 40px;
+  }
+
+  #bestseller .bs-list{
+    justify-content: center;
+  }
+
+  #bestseller .bs-list .bestseller-item{
+    margin:10px 40px;
+  }
     #newsletter {
       min-height: 250px;
     }
@@ -445,9 +458,7 @@ body {
 /* Small smartphones */
 @media (max-width: 320px) {
 
-.bestseller-item{
-    transform: translate(5% );
-}
+
 #bestseller .bestseller-item {
     width: 23%;
     /* background-color: #088178; */
