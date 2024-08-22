@@ -102,6 +102,7 @@ body {
 #our-services .service {
   width: 30%;
   min-width: 255px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -382,23 +383,54 @@ body {
         margin-top: 20px; */
     }
 
-    #our-services .service img{
-        min-width: 10px;
-
-    }
+    
 }
 
 @media (max-width: 768px) {
     #newsletter {
       min-height: 250px;
     }
+
     #newsletter .form {
       width: 60%;
       min-width: 285px;
       background-color: #088178;
-      /* margin: 20px 0; */
     }
+
+    #our-services {
+      padding:50px 40px;
+    }
+
+    #our-services .service{
+      width: 27%;
+    }
+
+    #our-services .service img{
+      width:80px;
+    }
+
+    #our-services .service h3{
+      font-size: 18px;
+    }
+
+    #our-services .service p{
+      font-size: 14px;
+    }
+
   }
+
+@media (max-width: 650px) {
+  #our-services {
+    display: block;
+  }
+
+  #our-services .service {
+    width: 100%;
+    max-width: 100%;
+    margin: 30px 0;
+  }
+}
+
 
   /* Smartphones */
 @media (max-width: 480px) {
